@@ -19,8 +19,8 @@
 
 \author{Deeven Seru\\
 Quantum AI Research\\
-123 AI Avenue, ML City\\
-\texttt{deevenseru11@gmail.com}
+\texttt{deevenseru11@gmail.com}\\
+\url{https://github.com/Deeven-Seru/geometric-quantum-attention}
 }
 
 \newcommand{\fix}{\marginpar{FIX}}
@@ -223,9 +223,11 @@ We evaluate on:
 \label{sec:gradient_scaling_results}
 
 \begin{table}[t]
-\caption{Cost function gradient variance $\mathrm{Var}[\nabla C]$ as a function of qubit count $n$ on the target transverse Ising Hamiltonian $H_{\mathrm{target}} = Z_1 Z_2 + \sum_{i=1}^n X_i$. HEA and the Q-Transformer baseline exhibit exponential vanishing $\sim 2^{-n}$, whereas GQA demonstrates polynomial scaling $\sim n^{-1.94 \pm 0.05}$, remaining trainable at $n=40$ qubits.}
+\centering
+\small
+\caption{Cost function gradient variance $\mathrm{Var}[\nabla C]$ as a function of qubit count $n$ on target transverse Ising Hamiltonian $H_{\mathrm{target}} = Z_1 Z_2 + \sum_{i=1}^n X_i$. HEA and Q-Transformer baseline exhibit exponential vanishing $\sim 2^{-n}$, whereas GQA demonstrates polynomial scaling $\sim n^{-1.94 \pm 0.05}$, remaining trainable at $n=40$ qubits.}
 \label{tab:gradient_variance}
-\begin{center}
+\vspace{2mm}
 \begin{tabular}{cccc}
 \toprule
 \textbf{Qubits ($n$)} & \textbf{HEA $\mathrm{Var}[\nabla C]$} & \textbf{Q-Transformer $\mathrm{Var}[\nabla C]$} & \textbf{GQA (Ours) $\mathrm{Var}[\nabla C]$} \\
@@ -241,7 +243,6 @@ We evaluate on:
 40 & $2.75 \times 10^{-15}$ & $1.88 \times 10^{-15}$ & $\mathbf{2.11 \times 10^{-3}}$ \\
 \bottomrule
 \end{tabular}
-\end{center}
 \end{table}
 
 \begin{figure}[t]
